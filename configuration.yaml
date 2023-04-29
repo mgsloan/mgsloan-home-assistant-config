@@ -1,0 +1,30 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Ping phone as another away / home sensor
+binary_sensor:
+  - platform: ping
+    host: 192.168.68.104
+    name: 'Michaels phone'
+
+device_tracker:
+  - platform: ping
+    hosts:
+      pixel_6a_ping: 192.168.68.104

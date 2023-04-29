@@ -1,0 +1,8 @@
+---
+circadian:
+  module: circadian
+  class: Circadian
+
+nfc_counter:
+  module: nfc_counter
+  class: NfcCounter

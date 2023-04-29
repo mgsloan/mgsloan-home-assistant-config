@@ -1,0 +1,15 @@
+.HA_VERSION
+.storage/
+.storage_old/
+automations.yaml
+blueprints/
+custom_components/
+*.log
+*.log.*
+*.db
+*.db-*
+secrets.yaml
+appdaemon/appdaemon.yaml
+appdaemon/compiled/
+appdaemon/dashboards/
+*.py.swp
